@@ -23,10 +23,10 @@ Meteor.methods
     process.env.MAIL_URL = 'smtp://postmaster%40cmal.mailgun.org:3ldr22afg917@smtp.mailgun.org:587'
     Email.send(
       {
-        from: 'patrontest@chrismalven.com'
-        to: 'cmalven@chrismalven.com'
-        bcc: 'cmalven@chrismalven.com'
+        from: 'test@blah.com'
+        to: 'test@blah.com'
+        bcc: 'test@blah.com'
         subject: 'Take a look at these documents'
-        html: "<h1>You've been invited to a VoteBox: #{question}</h1><p>To participate in this vote please click the following link:</p><p><a href='#{url}vote/#{newVoteId}'>Participate in this vote</a><p><strong>What is VoteBox?</strong> VoteBox makes it easy for groups of any size to vote on any issue. Use it to pick a restaurant, plan an event, or to make an important decision.</p>"
+        html: "<h1>You've been invited to view a document: #{doc_title}</h1><p>To view the document please click the following link:</p><p><a href='#{url}'></p>"
         }
       )
