@@ -1,0 +1,33 @@
+<template name="new_lead">
+
+  <form class="form-horizontal">
+    <legend>New Lead</legend>
+
+    <div class="control-group">
+      <label class="control-label" for="name">Name</label>
+      <div class="controls">
+        <input type="text" id="name" name="name" placeholder="">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="email" name="email">Email</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" placeholder="name@location.com">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        {{#each documents}}
+          <label class="checkbox">
+            <input type="checkbox" class="js-document-checkbox" data-document-id="{{ _id }}"> {{ path }}
+          </label>
+        {{/each}}
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-large btn-block btn-primary js-create-lead">Create Lead</button>
+  </form>
+
+</template>

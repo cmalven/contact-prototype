@@ -1,0 +1,13 @@
+<template name="leads_nav">
+  <h5>Leads:</h5>
+  
+  {{#if isLeads}}
+    <ul class="nav nav-tabs nav-stacked">
+      {{#each leads}}
+        <li><a href="{{pathFor 'leads_show'}}">{{email}}</a></li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <div class="well">No leads added, yet.</div>
+  {{/if}}
+</template>

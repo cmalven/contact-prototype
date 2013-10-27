@@ -1,0 +1,20 @@
+<template name="leads_show">
+    <h5>Name:</h5>
+    <div class="well">
+      {{ lead.name }}
+    </div>
+
+    <h5>Email:</h5>
+    <div class="well">
+      {{ lead.email }}
+    </div>
+
+    <h5>Documents:</h5>
+    <ul class="nav nav-tabs nav-stacked">
+      {{#each documents}}
+        <li><a href="/documents/{{ path }}"><i class="icon-book"></i>&nbsp; {{ path }}</a></li>
+      {{/each}}
+    </ul>
+
+    <a href="" class="btn btn-large btn-block btn-danger js-delete-lead">Delete Lead</button>
+</template>
