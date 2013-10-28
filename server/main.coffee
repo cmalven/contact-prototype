@@ -7,13 +7,11 @@
 # Bootstrap Documents
 
 if not Documents.find().count()
+  bootstrapDocs = [
+    'test-document.pdf'
+    'another-test-document.pdf'
+    'ultimate-test-document.pdf'
+  ]
 
-  # Bootstrap the Panels
-  Meteor.call 'addDocument',
-    path: 'test-document.pdf'
-
-  Meteor.call 'addDocument',
-    path: 'another-test-document.pdf'
-
-  Meteor.call 'addDocument',
-    path: 'ultimate-test-document.pdf'
+  _.each bootstrapDocs, (docPath) ->
+    Meteor.call 'addDocument', { path: docPath }
