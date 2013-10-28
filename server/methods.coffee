@@ -8,7 +8,6 @@ Meteor.methods
     return Leads.insert opts
 
   deleteLead: (_id) ->
-    console.log '_id', _id
     return Leads.remove _id
 
   # Documents
